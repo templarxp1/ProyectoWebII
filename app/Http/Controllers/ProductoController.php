@@ -53,9 +53,9 @@ class ProductoController extends Controller
     }
     public function update()
     {
-        $producto = Producto::findORfail($id);
-        $producto->update();
-        return redirect()->route('productos.index')->with('success', 'Producto eliminado exitosamente.');
+       // $producto = Producto::findORfail($id);
+       // $producto->update();
+       // return redirect()->route('productos.index')->with('success', 'Producto eliminado exitosamente.');
     }
 
 }

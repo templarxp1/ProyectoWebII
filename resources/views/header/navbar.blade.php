@@ -20,6 +20,9 @@
                     <a class="nav-link" href="{{ url('/contact') }}">Contacto</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('ventas') }}">Ventas</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url('logout') }}">Salir</a>
                 </li>
             </ul>

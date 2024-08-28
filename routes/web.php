@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\VentasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,7 +41,13 @@ Route::middleware('auth')->group(function (){
         Route::get('productos/{id}',  'show')->name('productos.show');
         Route::delete('productos/{id}',  'destroy')->name('productos.destroy');
         Route::put('productos', 'update')->name('productos.edit');
+        
     });
+    Route::get('ventas', [VentasController::class, 'index'])->name('ventas');
+    // Route::get('ventas/creando',  'crear')->name('ventas.crear');
+    
+
+
     Route::controller(ClientesController::class)->group(function () {
         Route::get('cliente', 'index');
         Route::get('cliente/creando',  'crear');
